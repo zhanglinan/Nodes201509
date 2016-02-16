@@ -60,16 +60,8 @@
             for (var k = 0; k < strClass.length; k++) {
                 //->k=0 "w3" ->/(?:^| +)w3(?: +|$)/
                 var reg = new RegExp("(?:^| +)" + strClass[k] + "(?: +|$)");
-                if (!reg.test(curTagClass)) {//->说明当前strClass[k]存储的样式类名在当前元素标签的className中不存在,假设的是错误的
-                    flag = false;
-                    break;//->跳出这个小循环,因为下面的样式类名就没有必要在比较了
-                }
-            }
-
-            //->如果flag为true,说明假设的是成功的,我们把当前的标签放在容器中
-            flag ? ary[ary.length] = curTag : null;
-        }
-        return ary;
+                if (!reg.test(curTagClass
+                    return ary;
     }
 
     var res = getElementsByClass("  w3   w1  ");
